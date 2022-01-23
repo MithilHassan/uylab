@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Container,
   Article,
@@ -55,7 +56,9 @@ const Hero = () => {
                 <span>IN BANGLADESH?</span>
               </h1>
               <p>WE PROVIDE TOP QUALITY IT COURSE WITH VALUE OF MONEY!</p>
-              <Button Big>ENROLL NOW</Button>
+              <Link to="/admission-form">
+                <Button Big>ENROLL NOW</Button>
+              </Link>
             </Article>
           </ThemeProvider>
         </Container>

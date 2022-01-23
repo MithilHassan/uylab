@@ -32,7 +32,7 @@ const CourseApi = () => {
       price: "3500 TK",
       rating: "5",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/graphic-design",
+      url_2: "/our-courses/graphic-design",
     },
     {
       img: img2,
@@ -44,7 +44,7 @@ const CourseApi = () => {
       price: "399 TK",
       rating: "5",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/wordpress",
+      url_2: "/our-courses/web-development",
     },
     {
       img: img3,
@@ -56,7 +56,7 @@ const CourseApi = () => {
       price: "2000 TK",
       rating: "5",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/freelancing",
+      url_2: "/our-courses/freelancing",
     },
     {
       img: img4,
@@ -69,7 +69,7 @@ const CourseApi = () => {
       price: "3500 TK",
       rating: "0",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/web-design",
+      url_2: "/our-courses/web-design",
     },
     {
       img: img5,
@@ -82,7 +82,7 @@ const CourseApi = () => {
       price: "3000 TK",
       rating: "0",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/digital-marketing",
+      url_2: "/our-courses/digital-marketing",
     },
     {
       img: img6,
@@ -94,7 +94,7 @@ const CourseApi = () => {
       price: "Free",
       rating: "0",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/freelancing",
+      url_2: "/our-courses/freelancing",
     },
     {
       img: img7,
@@ -106,7 +106,7 @@ const CourseApi = () => {
       price: "7000 TK",
       rating: "5",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/personal-development",
+      url_2: "/our-courses/personal-development",
     },
     {
       img: img8,
@@ -118,7 +118,7 @@ const CourseApi = () => {
       price: "10000 TK",
       rating: "0",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/graphic-design",
+      url_2: "/our-courses/ui-ux-design",
     },
     {
       img: img9,
@@ -130,7 +130,7 @@ const CourseApi = () => {
       price: "2000 TK",
       rating: "0",
       url_1: "/our-courses/pre-recorded",
-      url_2: "/our-courses/pre-recorded/graphic-design",
+      url_2: "/our-courses/graphic-design",
     },
     {
       img: offline1,
@@ -141,7 +141,7 @@ const CourseApi = () => {
       teacher: "Jahi Islam",
       price: "9500 TK",
       url_1: "/our-courses/offline",
-      url_2: "/our-courses/offline/graphic-design",
+      url_2: "/our-courses/graphic-design",
     },
     {
       img: online1,
@@ -152,7 +152,7 @@ const CourseApi = () => {
       teacher: "Rasel Islam",
       price: "3000 TK",
       url_1: "/our-courses/online",
-      url_2: "/our-courses/online/web-design",
+      url_2: "/our-courses/web-design",
     },
   ];
 };
@@ -163,34 +163,42 @@ export const CardContent = () => {
     {
       icon: logo1,
       title: "GRAPHIC DESIGN",
+      url: "/our-courses/graphic-design",
     },
     {
       icon: logo2,
       title: "WEB DESIGN",
+      url: "/our-courses/web-design",
     },
     {
       icon: logo3,
       title: "WEB DEVELOPMENT",
+      url: "/our-courses/web-development",
     },
     {
       icon: logo4,
       title: "VIDEO EDITING",
+      url: "/our-courses/video-editing",
     },
     {
       icon: logo5,
       title: "DIGITAL MARKETING",
+      url: "/our-courses/digital-marketing",
     },
     {
       icon: logo6,
-      title: "UI/Ux DESIGN",
+      title: "UI/UX DESIGN",
+      url: "/our-courses/ui-ux-design",
     },
     {
       icon: logo7,
       title: "Microsoft Office",
+      url: "/our-courses/microsoft-office",
     },
     {
       icon: logo8,
       title: "App Development",
+      url: "/our-courses/app-development",
     },
   ];
 };

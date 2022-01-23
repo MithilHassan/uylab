@@ -34,7 +34,9 @@ export const CourseList = () => {
         <ThemeProvider theme={theme}>
           {contents.map((content) => (
             <Card>
-              <img src={content.icon} alt="logo" />
+              <Link to={content.url}>
+                <img src={content.icon} alt="logo" />
+              </Link>
               <h3>{content.title}</h3>
             </Card>
           ))}
