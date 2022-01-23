@@ -43,6 +43,7 @@ export const NavBar = styled.ul`
 `;
 export const SearchBar = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 100%;
   @media (max-width: 768px) {
     display: none;
