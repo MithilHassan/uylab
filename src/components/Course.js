@@ -21,6 +21,7 @@ export const CourseList = () => {
     clr: "#fff",
     border: "1px solid #fff",
     height: "100px",
+    hover: "rgba(0, 0, 0, .1)",
   };
   const [contents, setContents] = useState(CardContent);
   return (
@@ -118,9 +119,9 @@ export const Courses = ({ Api }) => {
             }}
             onClick={loadMore}
             Medium
-            theme={{ bg: "#2BA6DE", clr: "#fff" }}
+            theme={{ bg: "#2BA6DE", clr: "#fff", hover: "#2795C7" }}
           >
-            Load More
+            <span>Load More</span>
           </Button>
         </Container>
       </Section>

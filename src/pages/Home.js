@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import { CourseList } from "../components/Course";
-import AboutUs from "../components/AboutUs";
+import About from "../components/AboutUs";
 import Faq from "../components/Faq";
 import Sliders from "../components/Slider";
 import { FooterTop } from "../components/Footer";
@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Hero />
       <CourseList />
-      <AboutUs />
+      <About />
       <Faq />
       <Sliders />
       <FooterTop />

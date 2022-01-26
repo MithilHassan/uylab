@@ -14,7 +14,7 @@ body{
 h1, h2, h3, p, button, input{
     font-family: 'Roboto', sans-serif;
 }
-a, span, li{
+a, span, li, label{
     font-family: 'Montserrat', sans-serif;
 }
 p, a, span{

@@ -8,26 +8,32 @@ import {
 } from "./Styles/Styles";
 import play from "./img/play.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Feedback = () => {
   return [
     {
       title: "Watch Graphic Design Student Feedback",
+      url: "/student-feedback",
     },
     {
       title: "Watch Web Design Student Feedback",
+      url: "/student-feedback",
     },
     {
       title: "Watch Digital Marketing Student Feedback",
+      url: "/student-feedback",
     },
     {
       title: "Watch Video Editing Student Feedback",
+      url: "/student-feedback",
     },
     {
       title: "Watch All Feedback of our students",
+      url: "/student-feedback",
     },
   ];
 };
-const AboutUs = () => {
+const About = () => {
   const [feedback, setFeedback] = useState(Feedback);
   return (
     <Section>
@@ -42,10 +48,12 @@ const AboutUs = () => {
         ></Iframe>
         <VideoLinks>
           {feedback.map((e) => (
-            <Box>
-              <span>{e.title}</span>
-              <img height="50px" src={play} alt="icon" />
-            </Box>
+            <Link to={e.url}>
+              <Box>
+                <span>{e.title}</span>
+                <img height="50px" src={play} alt="icon" />
+              </Box>
+            </Link>
           ))}
         </VideoLinks>
       </Container>
@@ -53,4 +61,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;

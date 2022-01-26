@@ -20,21 +20,25 @@ const CardContent = () => {
       icon: img1,
       title: "10,000+",
       subtitle: "TRAINED STUDENTS",
+      url: "/student-gallery",
     },
     {
       icon: img2,
       title: "SUCCESS",
       subtitle: "1000+ STUDENTS FEEDBACK",
+      url: "/student-feedback",
     },
     {
       icon: img3,
       title: "INDUSTRIES",
       subtitle: "900+ JOB PLACEMENTS",
+      url: "/job-placement",
     },
     {
       icon: img4,
       title: "EXPERT",
       subtitle: `50+ MENTOR'S`,
+      url: "/experts",
     },
   ];
 };
@@ -65,7 +69,9 @@ const Hero = () => {
         <CardWrapper Responsive>
           {contents.map((content) => (
             <Card>
-              <img src={content.icon} alt="logo" />
+              <Link to={content.url}>
+                <img src={content.icon} alt="logo" />
+              </Link>
               <h3>{content.title}</h3>
               <p>{content.subtitle}</p>
             </Card>

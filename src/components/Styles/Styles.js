@@ -27,6 +27,7 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     flex-direction: ${({ Mobile }) => Mobile && "column"};
     flex-wrap: ${({ Wrap }) => Wrap && "wrap"};
+    gap: 2rem;
   }
 `;
 export const FlexBox = styled.div`
@@ -136,6 +137,17 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
+  button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    background: #0d5dd1;
+    cursor: pointer;
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -202,6 +214,13 @@ export const SliderContainer = styled.div`
   max-width: 90vw;
   margin: 0 auto;
   padding: 1rem;
+  .item {
+    padding: 0rem 1rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 export const Column = styled.div`
   width: ${({ theme }) => theme.width && theme.width};
@@ -249,7 +268,7 @@ export const SearchBox = styled.div`
     display: ${({ Responsive }) => Responsive && "none"};
   }
 `;
-export const Button = styled.span`
+export const Button = styled.button`
   display: grid;
   place-items: center;
   height: 50px;
@@ -260,6 +279,7 @@ export const Button = styled.span`
     "120px"};
   background: ${({ theme }) => (theme.bg ? theme.bg : "transparent")};
   color: ${({ theme }) => (theme.clr ? theme.clr : "transparent")};
+  border: none;
   border: ${({ theme }) => theme.border && theme.border};
   border-radius: 25px;
   font-family: "Roboto", sans-serif;
@@ -268,9 +288,26 @@ export const Button = styled.span`
   font-weight: 600;
   letter-spacing: 2px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  span {
+    z-index: 2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    background: ${({ theme }) => theme.hover && theme.hover};
+    transition: 0.5s;
+  }
+  &:hover::before {
+    left: 0;
+  }
   @media (max-width: 768px) {
     width: ${(props) => props.XL && "100%"};
-    display: ${({ Responsive }) => Responsive && "none"};
   }
   @media (max-width: 400px) {
     margin: 0 auto;
@@ -330,9 +367,9 @@ export const Card = styled.div`
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   transition: 1s;
-  cursor: pointer;
   img {
     height: ${({ theme }) => (theme.height ? theme.height : "50px")};
+    cursor: pointer;
   }
   h3 {
     font-weight: 400;
@@ -391,6 +428,10 @@ export const Category = styled.div`
       color: #fff;
       text-align: center;
       cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background: #2795c7;
+      }
     }
     .rating {
       display: flex;
@@ -467,9 +508,9 @@ export const AdmitForm = styled.form`
     color: white;
     background: #9000ff;
     transition: 0.5s;
+    cursor: pointer;
     &:hover {
       background: #dddddd;
-      cursor: pointer;
     }
   }
   .flex {
@@ -604,6 +645,7 @@ export const StyledContact = styled.div`
       border-radius: 50px;
       font-family: "Montserrat";
       border: none;
+      cursor: pointer;
     }
   }
   .Contact_Form {
@@ -635,6 +677,119 @@ export const StyledContact = styled.div`
     }
     p {
       color: #000;
+    }
+  }
+`;
+export const VideoGallery = styled.div`
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  & > * {
+    flex: 1 1 32%;
+  }
+  .video {
+    flex: 100%;
+    height: 40vw;
+  }
+  .video {
+    margin-bottom: 5rem;
+  }
+  .bg {
+    height: min(200px, 17vw);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    img {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      height: 40px;
+      transition: 0.5s ease;
+    }
+    &:hover {
+      img {
+        opacity: 1;
+        top: 50%;
+      }
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem 0.5rem 2rem;
+  }
+  @media (max-width: 768px) {
+    & > * {
+      flex: 1 1 48%;
+    }
+    .bg {
+      height: min(200px, 25vw);
+    }
+  }
+`;
+export const Heading = styled.h1`
+  font-family: "Montserrat";
+  font-size: 2.25rem;
+  padding: 3rem;
+  text-align: center;
+  background: #457992;
+  color: #fff;
+`;
+export const SliderCard = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  .card {
+    padding: 3rem 1rem;
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+        rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+        rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+        rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+  }
+  .img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+  }
+  .rating {
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  @media (max-width: 480px) {
+    .img {
+      height: 180px;
+      width: 180px;
     }
   }
 `;

@@ -72,11 +72,13 @@ export const Sidebar = styled.div`
   height: 100%;
   background: #eef1f7;
   transition: 1s;
+  z-index: 100;
   h3 {
     font-size: 1.75rem;
     font-weight: 400;
   }
   .closeBtn {
+    cursor: pointer;
     position: absolute;
     height: 40px;
     top: 5px;
@@ -85,14 +87,15 @@ export const Sidebar = styled.div`
   li {
     padding: 1rem;
     background: #fff;
+    color: #000;
     margin: 5px 0px;
+    &:hover {
+      color: #de9b37;
+    }
     a {
-      color: black;
+      color: ;
       font-size: 1rem;
       font-weight: 600;
-      &:hover {
-        color: #de9b37;
-      }
     }
   }
   input {

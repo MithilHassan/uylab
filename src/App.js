@@ -13,8 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { FooterBottom } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import LogIn from "./pages/LogIn";
+import Expert from "./pages/Expert";
+import Students from "./pages/StudentsGallery";
+import StudentsApi from "./components/StudentsApi";
 function App() {
   const [courses, setCourses] = useState(courseApi);
+  const [gallery, setGallery] = useState(StudentsApi);
+
   return (
     <>
       <GlobalStyle />
@@ -29,11 +35,14 @@ function App() {
           path="/our-courses/:id"
           element={<CourseType Api={courses} />}
         ></Route>
+        <Route path="/:id" element={<Students Api={gallery} />}></Route>
+        <Route path="/experts" element={<Expert />}></Route>
         <Route path="/admission-form" element={<AdmissionForm />}></Route>
         <Route path="/verify" element={<Verify />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/login" element={<LogIn />}></Route>
       </Routes>
       <FooterBottom />
     </>

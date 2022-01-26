@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavMenu, SearchMenu } from "./Menu";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Logo,
   SearchBox,
@@ -40,12 +40,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { ThemeProvider } from "styled-components";
 const Header = () => {
+  const { pathname } = useLocation();
   const [activeNavMenu, setActiveNavMenu] = useState(false);
   const [activeSearchBar, setActiveSearchBar] = useState(false);
   const [activeLoginBar, setActiveLoginBar] = useState(false);
+  useEffect(() => {
+    setActiveNavMenu(false);
+    setActiveSearchBar(false);
+    setActiveLoginBar(false);
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const theme = {
     clr: "#fff",
     bg: "#2ba6de",
+    hover: "#2795C7",
   };
   const iconsStyle = {
     color: "white",
@@ -87,7 +95,9 @@ const Header = () => {
       </Nav>
       <Nav Border>
         <Container>
-          <Logo src={logo} alt="logo" />
+          <Link to="/">
+            <Logo src={logo} alt="logo" />
+          </Link>
           <SearchBar>
             <SearchBox>
               <Dropdown>
@@ -100,12 +110,18 @@ const Header = () => {
                 <img src={search} alt="search" />
               </Icon>
             </SearchBox>
-            <Icon theme={{ clr: "#16B48A" }}>
-              <img src={user} alt="icon" />
-              <span>Log in</span>
-            </Icon>
+            <Link to="/login">
+              <Icon theme={{ clr: "#16B48A" }}>
+                <img src={user} alt="icon" />
+                <span>Log in</span>
+              </Icon>
+            </Link>
             <ThemeProvider theme={theme}>
-              <Button>SIGN UP</Button>
+              <Link to="/login">
+                <Button>
+                  <span>SIGN UP</span>
+                </Button>
+              </Link>
             </ThemeProvider>
             <Icon Big>
               <img src={bookmark} alt="icon" />

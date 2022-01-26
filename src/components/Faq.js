@@ -20,10 +20,6 @@ const Faq = () => {
   const clickHandler = (e) => {
     setValue(e.target.innerText);
   };
-  const theme = {
-    clr: "#FFF",
-    bg: "#0D5DD1",
-  };
 
   return (
     <Section>
@@ -56,9 +52,7 @@ const Faq = () => {
                 <Item onClick={clickHandler}>Video Editing</Item>
               </Content>
             </Dropdown>
-            <Button XL theme={theme}>
-              SUBMIT
-            </Button>
+            <button type="submit">SUBMIT</button>
           </Form>
         </Container>
       </Background_img>

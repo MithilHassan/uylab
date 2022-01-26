@@ -26,8 +26,6 @@ export default class Sliders extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
-      centerMode: true,
-      centerPadding: -30,
       nextArrow: <img src={caretRight} />,
       prevArrow: <img src={caretLeft} />,
       responsive: [
