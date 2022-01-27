@@ -5,6 +5,7 @@ export const Section = styled.div`
   padding: ${({ NoPadding }) =>
     NoPadding ? "0rem 0rem 5rem 0rem" : "5rem 0rem"};
   background: ${({ theme }) => (theme.bg ? theme.bg : "#fff")};
+  min-height: 50vh;
   @media (max-width: 1024px) {
     padding: ${({ NoPadding }) =>
       NoPadding ? "0rem 0rem 3rem 0rem" : "3rem 0rem"};
@@ -122,16 +123,18 @@ export const Input = styled.input`
     color: transparent;
   }
 `;
-export const VideoLinks = styled(FlexBox)`
-  flex-direction: column;
+export const VideoLinks = styled.div`
   width: 30%;
   @media (max-width: 1024px) {
     width: 100%;
   }
 `;
-export const Box = styled(FlexBox)`
+export const Box = styled.div`
   background: #0d5dd1;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
   padding: 1rem;
   color: #fff;
 `;

@@ -85,6 +85,8 @@ export const Sidebar = styled.div`
     left: -50px;
   }
   li {
+    font-size: 1rem;
+    font-weight: 600;
     padding: 1rem;
     background: #fff;
     color: #000;
