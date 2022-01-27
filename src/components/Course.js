@@ -93,7 +93,7 @@ export const Courses = ({ Api }) => {
           ))}
         </Category>
       </Section>
-      <Section>
+      <Section NoPadding>
         <Title center>MOST POPULAR COURSES</Title>
         <SubTitle None center>
           We show our most popular pre-recorded courses. Buy now and start

@@ -81,6 +81,9 @@ export const Title = styled.h1`
       font-size: 2.5rem;
     }
   }
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 `;
 export const SubTitle = styled.p`
   text-align: ${({ center }) => center && "center"};
@@ -533,7 +536,18 @@ export const StyledVerify = styled.div`
   width: 100%;
   h2 {
     font-family: "Montserrat";
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #273044;
+  }
+  p {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    a {
+      margin-left: 0.5rem;
+      color: #2ba6de;
+      font-size: 1rem;
+    }
   }
   div {
     display: flex;
@@ -754,16 +768,26 @@ export const VideoGallery = styled.div`
 export const Heading = styled.h1`
   font-family: "Montserrat";
   font-size: 2.25rem;
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
   background: #457992;
   color: #fff;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 export const SliderCard = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem;
+  h2 {
+    color: #273044;
+    font-family: "Montserrat";
+  }
   .card {
     padding: 3rem 1rem;
     margin: 1rem 0rem;

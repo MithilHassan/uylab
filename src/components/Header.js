@@ -123,9 +123,11 @@ const Header = () => {
                 </Button>
               </Link>
             </ThemeProvider>
-            <Icon Big>
-              <img src={bookmark} alt="icon" />
-            </Icon>
+            <Link to="/wishlist">
+              <Icon Big>
+                <img src={bookmark} alt="icon" />
+              </Icon>
+            </Link>
           </SearchBar>
           <MobileSearch>
             <Icon

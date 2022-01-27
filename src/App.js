@@ -18,6 +18,7 @@ import LogIn from "./pages/LogIn";
 import Expert from "./pages/Expert";
 import Students from "./pages/StudentsGallery";
 import StudentsApi from "./components/StudentsApi";
+import WishList from "./pages/Wishlist";
 function App() {
   const [courses, setCourses] = useState(courseApi);
   const [gallery, setGallery] = useState(StudentsApi);
@@ -40,6 +41,7 @@ function App() {
         <Route path="/experts" element={<Expert />}></Route>
         <Route path="/admission-form" element={<AdmissionForm />}></Route>
         <Route path="/verify" element={<Verify />}></Route>
+        <Route path="/wishlist" element={<WishList />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

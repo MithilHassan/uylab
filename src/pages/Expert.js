@@ -50,6 +50,7 @@ export default class Expert extends Component {
     return (
       <Section>
         <SliderCard>
+          <h2>Best Rated Mentors</h2>
           <Slider {...settings}>
             <div className="card">
               <div className="img">
