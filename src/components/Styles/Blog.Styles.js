@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledBlog = styled.div`
   max-width: 1200px;
   width: 100%;
+  padding: 0rem 1rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
