@@ -7,6 +7,7 @@ import Verify from "./pages/Verify";
 import Blog from "./pages/Blog";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
+import AboutUs from "./pages/AboutUs";
 import courseApi from "./components/CourseApi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,6 +43,7 @@ function App() {
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/login" element={<LogIn />}></Route>
       </Routes>
       <FooterBottom />

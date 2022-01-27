@@ -54,7 +54,9 @@ export const CourseList = () => {
               Basic To Advanced
             </p>
             <ThemeProvider theme={theme}>
-              <Button Medium>Read More</Button>
+              <Link to="/about-us">
+                <Button Medium>Read More</Button>
+              </Link>
             </ThemeProvider>
           </Article>
           <img className="laptop" src={photo} alt="img" />

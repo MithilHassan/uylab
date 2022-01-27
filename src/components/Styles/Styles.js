@@ -614,6 +614,7 @@ export const StyledContact = styled.div`
     font-weight: 300;
   }
   form {
+    margin-top: 2rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -630,10 +631,27 @@ export const StyledContact = styled.div`
     }
     input {
       padding: 1rem;
-      border: 1px solid #aaa;
+      border: none;
+      background: #f0f2f5;
+      &:focus {
+        background: #fff;
+        outline: 2px solid #f0f2f5;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
     textarea {
       width: 100%;
+      background: #f0f2f5;
+      border: none;
+      &:focus {
+        background: #fff;
+        outline: 2px solid #f0f2f5;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
     button {
       width: 100%;
